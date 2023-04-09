@@ -10,6 +10,7 @@
 #define MINUS 1
 #define MUL 2
 #define DIV 3
+#define REMINDER 4
 
 
 @interface ViewController : UIViewController

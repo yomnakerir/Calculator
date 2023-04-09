@@ -112,6 +112,7 @@
             
             // how to deal with .  ??
         case 16:
+            // like numbers
             _number = [_number stringByAppendingString:@"."];
             [self printResult];
             break;
@@ -125,8 +126,8 @@
             
             // handle operand %
         case 18:
-            _number = [_number stringByAppendingString:@"-"];
-            [self printResult];
+            [self saveNum1];
+            _operand = REMINDER;
             break;
             
             
@@ -169,6 +170,9 @@
     
    else if (_operand == MUL)
         _result = m * n;
+    
+    else if (_operand == REMINDER)
+        _result = (int)m  % (int)n;
     
     return  _result;
 }
